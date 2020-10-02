@@ -23,7 +23,7 @@
 
 ## Remove configuration for host tethering
 The default configuration expects the usb host to provide a gateway which could affect routing
-For further details see [https://openwrt.org/docs/guide-user/base-system/basic-networking]
+For further details see https://openwrt.org/docs/guide-user/base-system/basic-networking
 
 * Edit the `/etc/config/network` configuration file
 ** `nano /etc/config/network`
@@ -45,7 +45,7 @@ config interface 'lan'
 Note: Some of these changes may not be strictly necessary.
 The OpenWRT platform that the Lan Turtle is based on uses the FW3 firewall by default. This generates a rather complicated iptables config from a few config files. 
 It is generally easier to edit the base config rather than messing with the iptables config directly.
-For further details see [https://openwrt.org/docs/guide-user/firewall/overview]
+For further details see https://openwrt.org/docs/guide-user/firewall/overview
 
 * Edit the `\etc\config\firewall` config file for FW3
 * Add a name to the standard lan --> wan forwarding section
