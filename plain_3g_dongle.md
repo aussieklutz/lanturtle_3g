@@ -16,7 +16,9 @@
 
 * Enter the "Config" --> "Configure 3G Modem" menu
 * Set the APN from your cellular provider
-[![Setting the APN](res/configure_apn.png)]
+
+[Setting the APN](res/configure_apn.png)
+
 * Save and exit the turtle shell.
 
 ## Remove configuration for host tethering
