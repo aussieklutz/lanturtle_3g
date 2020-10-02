@@ -9,16 +9,14 @@
 
 ## Connect to the turtle's SSH server
 * Connect to ssh on the turtle (`root:sh3llz@172.16.84.1`) and you will be launched into the "turtle shell"
-** If you have disabled the turtle shell, use the command `turtle`
+  * If you have disabled the turtle shell, use the command `turtle`
 
 ## Setup the sim card APN
 3G services usually have a service identifier (citation needed) or APN which needs to be configured to successfully make a connection
 
 * Enter the "Config" --> "Configure 3G Modem" menu
 * Set the APN from your cellular provider
-
-![Setting the APN](res/configure_apn.png)
-
+  * ![Setting the APN](res/configure_apn.png)
 * Save and exit the turtle shell.
 
 ## Remove configuration for host tethering
@@ -26,7 +24,7 @@ The default configuration expects the usb host to provide a gateway which could 
 For further details see https://openwrt.org/docs/guide-user/base-system/basic-networking
 
 * Edit the `/etc/config/network` configuration file
-** `nano /etc/config/network`
+  * `nano /etc/config/network`
 * Remove the `option gateway '172.16.84.84'` line from the config, you can use ctrl+k in nano to do this easier
 ```
 config interface 'lan'
@@ -49,9 +47,9 @@ For further details see https://openwrt.org/docs/guide-user/firewall/overview
 
 * Edit the `\etc\config\firewall` config file for FW3
 * Add a name to the standard lan --> wan forwarding section
-** Replace `config forwarding` with `config forwarding 'wan_forwarding_lan_out'`
+  * Replace `config forwarding` with `config forwarding 'wan_forwarding_lan_out'`
 * Add a forwarding section from the lan --> 3gwan
-** After the `config forwarding 'wan_forwarding_lan_out'` section, add the following:
+  * After the `config forwarding 'wan_forwarding_lan_out'` section, add the following:
 ```
 config forwarding '3gwan_forwarding_lan_out'
         option src 'lan'
